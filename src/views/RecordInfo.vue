@@ -8,7 +8,7 @@
     >
         <el-table-column
                 prop="number"
-                label="阶段"
+                label="阶段号"
                 align="center"
                 width="100px"
                 sortable>
@@ -28,7 +28,6 @@
             <template slot-scope="scope">
                 <el-button
                         size="mini"
-                        type="primary"
                         @click="descriptionBtn(scope.$index)">查看 / 编辑
                 </el-button>
                 <!--修改表单-->
@@ -43,8 +42,7 @@
                             </el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary"
-                                       @click="modifyDescription(scope.$index, descriptionForm.description)">修改
+                            <el-button @click="modifyDescription(scope.$index, descriptionForm.description)">修改
                             </el-button>
                             <el-button @click="descriptionDialog = false">取消</el-button>
                         </el-form-item>
@@ -59,7 +57,6 @@
             <template slot-scope="scope">
                 <el-button
                         size="mini"
-                        type="primary"
                         @click="comparisonBtn(scope.$index)">查看 / 编辑
                 </el-button>
                 <!--修改表单-->
@@ -74,8 +71,7 @@
                             </el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary"
-                                       @click="modifyComparison(scope.$index, comparisonForm.comparison)">修改
+                            <el-button @click="modifyComparison(scope.$index, comparisonForm.comparison)">修改
                             </el-button>
                             <el-button @click="comparisonDialog = false">取消</el-button>
                         </el-form-item>
@@ -90,7 +86,6 @@
             <template slot-scope="scope">
                 <el-button
                         size="mini"
-                        type="primary"
                         @click="recoverySituationBtn(scope.$index)">查看 / 编辑
                 </el-button>
                 <!--修改表单-->
@@ -105,8 +100,7 @@
                             </el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary"
-                                       @click="modifyRecoverySituation(scope.$index, recoverySituationForm.recoverySituation)">修改
+                            <el-button @click="modifyRecoverySituation(scope.$index, recoverySituationForm.recoverySituation)">修改
                             </el-button>
                             <el-button @click="recoverySituationDialog = false">取消</el-button>
                         </el-form-item>
@@ -127,7 +121,6 @@
 
 <script>
     import {setRecord, getDescription, getComparison, listRecords, getRecoverySituation} from "../api/record";
-    import {rejectConference} from "../api/conference";
 
     export default {
         name: "RecordInfo",

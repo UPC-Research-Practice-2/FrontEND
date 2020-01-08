@@ -34,3 +34,38 @@ export function delPatient(patientNumber) {
         }
     })
 }
+
+export function modifyPatient(patientNumber, name, birthPlace, gender, age, nation, isMarried, inPatientDate, recordDate) {
+    return request({
+        url: '/patient/modify.do',
+        method: 'post',
+        data: {
+            patientNumber: patientNumber,
+            name: name,
+            birthPlace: birthPlace,
+            gender: gender,
+            age: age,
+            nation: nation,
+            isMarried: isMarried,
+            inPatientDate: inPatientDate,
+            recordDate: recordDate
+        }
+    })
+}
+
+export function initPatient(name, birthPlace, gender, age, nation, isMarried, inPatientDate, recordDate) {
+    return request({
+        url: '/patient/init.do',
+        method: 'post',
+        data: {
+            name: name,
+            birthPlace: birthPlace,
+            gender: gender,
+            age: age,
+            nation: nation,
+            isMarried: isMarried,
+            inPatientDate: inPatientDate,
+            recordDate: recordDate
+        }
+    })
+}

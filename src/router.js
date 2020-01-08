@@ -281,6 +281,10 @@ export default new Router({
                     path: '/patientInfo',
                     name: 'patientInfo',
                     component:()=>import(/*webpackChunkName:"profile"*/"./views/patientInfo.vue"),
+                },                {
+                    path: '/firstRecrod',
+                    name: 'firstRecrod',
+                    component:()=>import(/*webpackChunkName:"profile"*/"./views/firstRecrod.vue"),
                 },
                 {
                     path: '/recordInfo',

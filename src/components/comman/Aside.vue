@@ -19,14 +19,15 @@
                 <span slot="title">病人基本信息&nbsp;</span>
             </el-menu-item>
 
-            <el-menu-item index="/recordInfo">
-                <i class="el-icon-view"></i>
-                <span slot="title">病人病情管理&nbsp;</span>
+            <el-menu-item index="/firstRecrod">
+                <i class="el-icon-edit"></i>
+                <span slot="title">病人初诊记录&nbsp;</span>
             </el-menu-item>
 
-            <el-menu-item index="/recovery">
-                <i class="el-icon-edit"></i>
-                <span slot="title">病人康复管理&nbsp;</span>
+
+            <el-menu-item index="/recordInfo">
+                <i class="el-icon-view"></i>
+                <span slot="title">康复阶段管理&nbsp;</span>
             </el-menu-item>
 
             <!--<el-menu-item index="/Form">-->
